@@ -1,0 +1,165 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+/* Navbar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Kaisei Decol", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 0;
+    display: flex;
+}
+
+a {
+  padding: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* About Me Section */
+
+.section-style-center {
+    color: white;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapers.com%2Fimages%2Fhd%2Ftraditional-aesthetic-village-japanese-houses-2tytaelivkmvpiwi.jpg&f=1&nofb=1&ipt=480e1dca29c2f968905a1bdae5005c864e97b5c8b17ee0914215c555decb1574');
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 730px;  
+}
+
+.section-text-center {
+    max-width: 50%;
+    text-align: center;
+}
+
+.section-text-center h2 {
+    font-family: "Kaisei Decol", serif;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 32px;
+}
+
+.section-text-center p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Text on the right sections */
+
+.section-style-right {
+    color: white;
+    background-color: #333333;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.wallpaperflare.com%2Fstatic%2F49%2F820%2F978%2Fjapan-night-neon-masashi-wakui-wallpaper.jpg&f=1&nofb=1&ipt=1cdb7900f901998c3bd5810d304c6c13ecf9fee9f91d548e521b7915dd1ea293');
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 600px; 
+}
+
+.section-text-right {
+    max-width: 50%;
+    margin-right: 30px;
+}
+
+.section-text-right h2 {
+    font-family: "Kaisei Decol", serif;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 32px;
+}
+
+.section-text-right p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Text on the left sections */
+
+.section-style-left {
+    color: white;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.wallpaperflare.com%2Fstatic%2F49%2F820%2F978%2Fjapan-night-neon-masashi-wakui-wallpaper.jpg&f=1&nofb=1&ipt=1cdb7900f901998c3bd5810d304c6c13ecf9fee9f91d548e521b7915dd1ea293');
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 600px; 
+}
+
+.section-text-left {
+    max-width: 50%;
+    margin-left: 30px;
+}
+
+.section-text-left h2 {
+    font-family: "Kaisei Decol", serif;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 32px;
+}
+
+.section-text-left p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;  
+    display: flex;               
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;  
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    padding: 10px;
+    line-height: 1.6;
+}
+
+.footer a {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    text-decoration: underline;
+}
