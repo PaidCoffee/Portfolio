@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay"></div>
     <header>
-    <h1>Joonas Mankisenmaa</h1>
-        <ul>
-            <li><b><a href="index.html">Home</a></b></li>
+    <img class="logo" src="images/logo-temp.png" alt="temporary logo">
+        <ul class="nav-links">
+            <li><a class="active" href="index.html">Home</a></b></li>
             <li><a href="about-me.html">About Me</a></li>
             <li><a href="ux.html">UX</a></li>
             <li><a href="photography.html">Photography</a></li>
@@ -21,12 +22,13 @@
             <li><a href="blog.html">Blog</a></li>
         </ul> 
         <div class="hamburger">
+            &#9776;
         </div>
     </header>
 
     <section class="section-style-center bg-about-me">
         <div class="section-text-center">
-        <h2>What is this page and who the hell is this guy?</h2>
+        <h1>Joonas Mankisenmaa Portfolio</h1>
             <p>
                 Depends on what you mean. As a person — many things.
                 Born and raised in Oulu, Finland, but since 2025 I've been living in Espoo, at least for now.
@@ -71,7 +73,6 @@
                 Another one of my life-long dreams that only took me 26 years of gathering enough courage to start doing. 
                 For now this page is going to be an empty one, but one day I'll start posting here.
             </p>
-            <button type="button" disabled >Art</button>
         </div>
     </section>
 
@@ -82,7 +83,7 @@
                 Here you can read about my about my miscellaneous endeavours. As I'm coding this website I'll make a prediction that the blog page
                 is going to end up being the most active page on this entire website, and I'm not backing down.
             </p>
-            <button type="button">Blog</button>
+            <a href="blog.html" class="button">Blog</a>
         </div>
     </section>
 
@@ -92,5 +93,6 @@
         <p>Contact Me: <a href="mailto:joonas.mankisenmaa@proton.me">joonas.mankisenmaa@proton.me</a></p>
         <p>What are you still doing here? Go touch some grass.</p><br>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
