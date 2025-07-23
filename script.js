@@ -19,4 +19,20 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdownBtn = document.getElementById("dropdownBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+  // Toggle dropdown on button click
+    dropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent triggering outside click
+      dropdownMenu.classList.toggle("show");
+  });
+
+  // Close dropdown if clicking outside
+    document.addEventListener("click", () => {
+      dropdownMenu.classList.remove("show");
+  });
+});
+
 

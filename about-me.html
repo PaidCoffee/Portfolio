@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/about-me.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -30,43 +30,69 @@
 
     <div class="about-me-container">
         <img class="portrait-small-screen" src="./images/portrait-small-screen.png" alt="Horizontal Portrait For Larger Screens">
-        <img class="portrait-side" src="./images/literally-me.jpg" alt="Vertical Portrait For Smaller Screens">
-        <div class="about-me-text">
-            <h2>Who the fuck is this man?</h2>
-            <h3>Seriously who is he?</h3>
-            <p>Born in Oulu, currently hiding in Espoo — for now. 
-               I’ve been told these “About Me” pages and portfolios are really important, 
-               but I don’t believe anyone actually reads them. I certainly wouldn’t. 
-               But here goes nothing.
-            </p>
 
-            <p>In 2023, I graduated with a Bachelor’s degree in Business Information Systems (BBA) 
-                and have been doing odd jobs here and there, desperately looking for that mythical beast called a full-time job. 
-                My professional life — saying that made me gag a bit — has mostly revolved around marketing.
-                You might wonder, with my demeanor and educational background, why I decided to do marketing instead of working in tech. 
-                Well, how the hell should I know, lmao. I’ve always seen marketing as the ultimate “I have no fucking clue what I’m doing with my life” career choice, 
-                so at the time, it made perfect sense. Not that I’ve now unlocked some deep insight into my life’s purpose, 
-                far from it, but at least I know marketing ain’t it.
-            </p>
-
-            <p>These days I’m trying to weasel my way into the tech sphere, preferably doing UI & UX design, 
-                   IT support, or maybe coding if I can summon the willpower to keep my skills up-to-date.
-                   Now that all that garbage is out of the way, let’s talk about something fun. 
-                   When I’m not dooming about the pathetic state of the job market, 
-                   you’ll probably find me drawing, gaming, lifting, reading, doing photography, or studying. 
-                   Right now, I’m doing my best to invest most of my time in my projects, like this website, learning to draw, and learning Japanese. 
-                   I’ve been thinking about going back to school at some point (preferably sooner rather than later). Have I decided what to study? Not yet. 
-                   But I’m starting to get some clue about what I might want to do next.
-                   If, for whatever reason, you made it to the bottom of this monologue, you can find my resume through the download button below. 
-                   I’m not on any socials, so the only place you can stalk me is right here, on this website, which I might update once in a while. Bye.
+        <div class="text-and-form-container">
+            <div class="about-me-text">
+                <h2>Who the fuck is this man?</h2>
+                <h3>Seriously who is he?</h3>
+                <p>Born in Oulu, currently hiding in Espoo — for now. 
+                I’ve been told these “About Me” pages and portfolios are really important, 
+                but I don’t believe anyone actually reads them. I certainly wouldn’t. 
+                But here goes nothing.
                 </p>
+                <p>In 2023, I graduated with a Bachelor’s degree in Business Information Systems (BBA) 
+                    and have been doing odd jobs here and there, desperately looking for that mythical beast called a full-time job. 
+                    My professional life — saying that made me gag a bit — has mostly revolved around marketing.
+                    You might wonder, with my demeanor and educational background, why I decided to do marketing instead of working in tech. 
+                    Well, how the hell should I know, lmao. I’ve always seen marketing as the ultimate “I have no fucking clue what I’m doing with my life” career choice, 
+                    so at the time, it made perfect sense. Not that I’ve now unlocked some deep insight into my life’s purpose, 
+                    far from it, but at least I know marketing ain’t it.
+                </p>
+                <p>These days I’m trying to weasel my way into the tech sphere, preferably doing UI & UX design, 
+                    IT support, or maybe coding if I can summon the willpower to keep my skills up-to-date.
+                    Now that all that garbage is out of the way, let’s talk about something fun. 
+                    When I’m not dooming about the pathetic state of the job market, 
+                    you’ll probably find me drawing, gaming, lifting, reading, doing photography, or studying. 
+                    Right now, I’m doing my best to invest most of my time in my projects, like this website, learning to draw, and learning Japanese. 
+                    I’ve been thinking about going back to school at some point (preferably sooner rather than later). Have I decided what to study? Not yet. 
+                    But I’m starting to get some clue about what I might want to do next.
+                    If, for whatever reason, you made it to the bottom of this monologue, you can find my resume through the download button below. 
+                    I’m not on any socials, so the only place you can stalk me is right here, on this website, which I might update once in a while. Bye.
+                    </p>
+
+                <div class="about-me-buttons-container">
+                    <div class="dropdown">
+                    <button class="about-me-buttons dropdown-toggle" id="dropdownBtn">
+                        <i class="fa fa-caret-down" style="margin-right: 8px;"></i>Download Resume</button>
+                    <div class="dropdown-content" id="dropdownMenu">
+                        <a href="files/CV - English.pdf" download><i class="fa fa-download" style="margin-right: 8px;"></i>CV (English)</a>
+                        <a href="files/CV - Suomi.pdf" download><i class="fa fa-download" style="margin-right: 8px;"></i>CV (Suomi)</a>
+                    </div>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="contact-form">
+                <form action="https://formspree.io/f/myzpenev" method="POST">
+                    <label>
+                        Your email:
+                        <input type="email" name="email" required>
+                    </label>
+                    <label>
+                        Your message:
+                        <textarea name="message" required></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div> <!-- end .text-and-form-container -->
+    </div> <!-- end .about-me-container -->
+
 
         <hr class="divider">
         <footer class="footer">
             <p>&copy; 2025 Joonas Mankisenmaa.</p>
-            <p>Contact Me: <a href="mailto:joonas.mankisenmaa@gmail.com">joonas.mankisenmaa@gmail.com</a></p>
+            <p>Contact Me: </p>
             <p>What are you still doing here?</p>
         </footer>
 
