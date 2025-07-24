@@ -35,6 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Download Button Dropdown //
+const dropdownBtn = document.getElementById('dropdownBtn');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+dropdownBtn.addEventListener('click', () => {
+  dropdownMenu.classList.toggle('open');
+  dropdownBtn.classList.toggle('open');
+});
+
 // Typewriter Effect //
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -53,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (letterIndex < currentPhrase.length) {
       letterIndex++;
-      setTimeout(type, 100);
+      setTimeout(type, 70);
     } else {
       arrow.classList.add("show-arrow"); // Makes it visible with a fade
     }
