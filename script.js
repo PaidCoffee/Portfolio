@@ -35,4 +35,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Typewriter Effect //
 
+document.addEventListener("DOMContentLoaded", () => {
+  const phrases = [
+    "Hello there, and welcome to my about me page."
+  ];
+
+  const el = document.getElementById("typewriter");
+  const arrow = document.getElementById("scroll-arrow");
+  let letterIndex = 0;
+
+  function type() {
+    const currentPhrase = phrases[0];
+    const visibleText = currentPhrase.substring(0, letterIndex);
+    el.textContent = visibleText;
+
+    if (letterIndex < currentPhrase.length) {
+      letterIndex++;
+      setTimeout(type, 100);
+    } else {
+      arrow.classList.add("show-arrow"); // Makes it visible with a fade
+    }
+  }
+
+  arrow.addEventListener("click", () => {
+    const nextSection = document.querySelector(".about-me-container");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+  type();
+});
