@@ -1,23 +1,38 @@
 /* Backgrounds */
 
 .bg-about-me {
-    background-image: url('../images/whos\ this\ guy.png');
+    background-image: url('../images/2Z7A5121.jpg');
 }
 
 .bg-ux-ui {
-    background-image: url('../images/UX\ projects.png');
+    background-image: url('../images/happy\ beavers.png');
 }
 
 .bg-photography {
-    background-image: url('../images/Photography.png');
+    background-image: url('../images/2Z7A4881.jpg');
 }
 
 .bg-art {
-    background-image: url('../images/art.png');
+    background-image: url('../images/2Z7A4338.jpg');
 }
 
 .bg-blog {
-    background-image: url('../images/Blog.png');
+    background-image: url('../images/2Z7A8009.jpg');
+}
+
+.section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.section-style-right, .section-style-left, .section-style-center {
+    position: relative;
 }
 
 /* About Me Section */

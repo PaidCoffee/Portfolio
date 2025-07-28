@@ -7,16 +7,6 @@ body {
 
 /* Navbar */
 
-header {
-    display: flex;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    justify-content: space-between;
-    font-family: "Kaisei Decol", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .logo {
     width: auto;
     height: 60px;
@@ -29,7 +19,6 @@ header {
     display: flex;
     list-style-type: none;
     margin: 0;
-    margin-top: 15px;
     margin-right: 20px;
     padding: 0;
 }
@@ -67,6 +56,75 @@ header {
     color: white;
     cursor: pointer;
     margin-right: 20px;
+}
+
+/* Navbar Evolved */
+/* Header section including image, nav, and text overlay */
+.header-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background image for header */
+.header-hero img.navbar-bg,
+.navbar-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Header content like logo and navigation */
+.header-hero header {
+    margin: 0;
+    position: relative;
+    z-index: 800;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background: transparent;
+    backdrop-filter: blur(1px);
+}
+
+/* Overlay on the image to darken it */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Centered text in the hero section */
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #E0E0E0;
+    font-family: "Kaisei Decol", serif;
+    z-index: 2;
+    animation: fadeUp 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+/* Hero text heading */
+.header-text h2 {
+    font-size: 42px;
+}
+
+/* Typewriter blinking cursor */
+#typewriter::after {
+    content: '|';
+    animation: blink 0.7s infinite;
 }
 
 /* Blocks hamburger menu from becoming a third child. */ 
@@ -187,6 +245,36 @@ header {
     body.no-scroll {
       overflow: hidden;
       height: 100vh;
+    }
+}
+
+/* Fade animation for header text */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Bounce arrow animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(15px);
+        opacity: 1;
     }
 }
 
