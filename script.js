@@ -1,56 +1,41 @@
-// Open Hamburger Menu //
+document.addEventListener("DOMContentLoaded", () => {
+  // Hamburger Menu Toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const body = document.body;
+  const overlay = document.querySelector('.overlay');
 
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const body = document.body;
-const overlay = document.querySelector('.overlay');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    body.classList.toggle('no-scroll');
+    overlay.classList.toggle('active');
+  });
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');      
-  body.classList.toggle('no-scroll');       
-  overlay.classList.toggle('active');
-});
-
-// Close Menu By Clicking Outside Of The Hamburger Menu //
-
-overlay.addEventListener('click', () => {
+  // Close Menu on Overlay Click
+  overlay.addEventListener('click', () => {
     navLinks.classList.remove('active');
     body.classList.remove('no-scroll');
     overlay.classList.remove('active');
-});
+  });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const dropdownBtn = document.getElementById("dropdownBtn");
-    const dropdownMenu = document.getElementById("dropdownMenu");
+  // Dropdown Resume Toggle
+  const dropdownBtn = document.getElementById("dropdownBtn");
+  const dropdownMenu = document.getElementById("dropdownMenu");
 
-  // Toggle dropdown on button click
-    dropdownBtn.addEventListener("click", (e) => {
-      e.stopPropagation(); // prevent triggering outside click
-      dropdownMenu.classList.toggle("show");
+  dropdownBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent closing when clicking inside
+    dropdownMenu.classList.toggle("show");
+    dropdownBtn.classList.toggle("open");
   });
 
   // Close dropdown if clicking outside
-    document.addEventListener("click", () => {
-      dropdownMenu.classList.remove("show");
+  document.addEventListener("click", () => {
+    dropdownMenu.classList.remove("show");
+    dropdownBtn.classList.remove("open");
   });
-});
 
-// Download Button Dropdown //
-const dropdownBtn = document.getElementById('dropdownBtn');
-const dropdownMenu = document.getElementById('dropdownMenu');
-
-dropdownBtn.addEventListener('click', () => {
-  dropdownMenu.classList.toggle('open');
-  dropdownBtn.classList.toggle('open');
-});
-
-// Typewriter Effect //
-
-document.addEventListener("DOMContentLoaded", () => {
-  const phrases = [
-    "Hello there, and welcome to my about me page."
-  ];
-
+  // Typewriter Effect
+  const phrases = ["Hello there, and welcome to my about me page."];
   const el = document.getElementById("typewriter");
   const arrow = document.getElementById("scroll-arrow");
   let letterIndex = 0;
@@ -64,16 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
       letterIndex++;
       setTimeout(type, 70);
     } else {
-      arrow.classList.add("show-arrow"); // Makes it visible with a fade
+      arrow.classList.add("show-arrow");
     }
   }
 
+  type();
+
+  // Scroll to section on arrow click
   arrow.addEventListener("click", () => {
     const nextSection = document.querySelector(".about-me-container");
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
   });
-
-  type();
 });
