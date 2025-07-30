@@ -1,19 +1,26 @@
 /* Photography Gallery Styles */
-
 .image-container {
-    column-count: 4;
-    column-gap: 5px;
-}
-
-.image-container a {
-    max-width: 100%;
-    display: block;
+    gap: 5px;
 }
 
 .image-container img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
+}
+
+/* Responsive Photography Gallery */
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .image-container {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .image-container {
+        column-count: 3;
+    }
 }
 
 /* UX Gallery Styles */ 
