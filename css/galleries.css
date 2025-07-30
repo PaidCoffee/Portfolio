@@ -1,21 +1,19 @@
 /* Photography Gallery Styles */
 
 .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 10px;    
+    column-count: 4;
+    column-gap: 5px;
 }
 
-.column {
-    flex: 25%;
-    max-width: 24%;
-    padding: 4px 4px; 
+.image-container a {
+    max-width: 100%;
+    display: block;
 }
 
-.column img {
-    margin-top: 8px;
+.image-container img {
     width: 100%;
-    vertical-align: middle;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-/* UX Gallery Styles */
+/* UX Gallery Styles */ 
