@@ -33,95 +33,47 @@ document.addEventListener("DOMContentLoaded", () => {
     dropdownMenu.classList.remove("show");
     dropdownBtn.classList.remove("open");
   });
-
-  // Typewriter Effect About Me Page // 
-  const phrases = ["About me page."];
-  const el = document.getElementById("typewriter");
-  const arrow = document.getElementById("scroll-arrow");
-  let letterIndex = 0;
-
-  function type() {
-    const currentPhrase = phrases[0];
-    const visibleText = currentPhrase.substring(0, letterIndex);
-    el.textContent = visibleText;
-
-    if (letterIndex < currentPhrase.length) {
-      letterIndex++;
-      setTimeout(type, 70);
-    } else {
-      arrow.classList.add("show-arrow");
-    }
-  }
-
-  type();
-
-  // Scroll to section on arrow click
-  arrow.addEventListener("click", () => {
-    const nextSection = document.querySelector(".about-me-container");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-  });
 });
 
-// Typewriter Effect Front Page //
 document.addEventListener("DOMContentLoaded", () => {
-  const phrasesFP = ["Hello there, and welcome to my portfolio."];
-  const elFP = document.getElementById("typewriter-fp");
-  const arrowFP = document.getElementById("scroll-arrow-fp");
-  let letterIndexFP = 0;
-
-  function typeFP() {
-    const currentPhrase = phrasesFP[0];
-    const visibleText = currentPhrase.substring(0, letterIndexFP);
-    elFP.textContent = visibleText;
-
-    if (letterIndexFP < currentPhrase.length) {
-      letterIndexFP++;
-      setTimeout(typeFP, 70);
-    } else {
-      arrowFP.classList.add("show-arrow");
-    }
-  }
-
-  typeFP();
-
-  // Scroll to section on arrow click
-  arrowFP.addEventListener("click", () => {
-    const nextSection = document.querySelector(".about-me-container");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
-
-// Typewriter Effect Photo Page //
-document.addEventListener("DOMContentLoaded", () => {
-  const phrasesPhoto = ["Photography."];
-  const elPhoto = document.getElementById("typewriter-photo");
-  const arrowPhoto = document.getElementById("scroll-arrow-photo");
+  const phrasesPhoto = 
+  ["Welcome To My Portfolio.",
+   "About Me",
+   "Projects.",
+   "Photography.",
+   "Art.",
+   "Contact Me."];
+  const elPhoto = document.getElementById("typewriter");
   let letterIndexPhoto = 0;
+  let currentPhrase;
+  const path = window.location.pathname;
+
+  function chooseSentence () {
+    if (path.includes("index.html")) {
+      currentPhrase = phrasesPhoto[0];
+    } else if (path.includes("about-me.html")) {
+      currentPhrase = phrasesPhoto[1];
+    } else if (path.includes("ux.html")) {
+      currentPhrase = phrasesPhoto[2];
+    } else if (path.includes("photography.html")) {
+      currentPhrase = phrasesPhoto[3];
+    } else if (path.includes("art.html")) {
+      currentPhrase = phrasesPhoto[4];
+    } else {
+      currentPhrase = phrasesPhoto[5];
+    }
+  }
+
+  chooseSentence();
 
   function typePhoto() {
-    const currentPhrase = phrasesPhoto[0];
     const visibleText = currentPhrase.substring(0, letterIndexPhoto);
     elPhoto.textContent = visibleText;
 
     if (letterIndexPhoto < currentPhrase.length) {
       letterIndexPhoto++;
       setTimeout(typePhoto, 70);
-    } else {
-      arrowPhoto.classList.add("show-arrow");
     }
   }
-
   typePhoto();
-
-  // Scroll to section on arrow click
-  arrowPhoto.addEventListener("click", () => {
-    const nextSection = document.querySelector(".about-me-container");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-  });
 });
