@@ -1,7 +1,7 @@
 /* Body*/
 
 body {
-    background-color: black;
+    background-color: #1e1919;
     margin: 0;
 }
 
@@ -112,7 +112,7 @@ body {
     color: #E0E0E0;
     font-family: "Kaisei Decol", serif;
     z-index: 2;
-    animation: fadeUp 1.5s ease-out forwards;
+    animation: fadeUp 0s ease-out forwards;
     opacity: 0;
 }
 
@@ -129,16 +129,23 @@ body {
 }
 
 
-/* Fade animation for header text */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -60%);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
+h2 {
+    color: #E0E0E0;
+    font-size: 32px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+p {
+    color: #E0E0E0;
+    font: 16px "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 75ch;
+    line-height: 1.5;
 }
 
 /* Cursor blink animation */
@@ -163,6 +170,17 @@ body {
 
 .hamburger {
     display: none;
+}
+
+.scroll-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opactity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Buttons */

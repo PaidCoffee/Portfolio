@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Typewriter effect for headers 
+
 document.addEventListener("DOMContentLoaded", () => {
   const phrasesPhoto = 
   ["Welcome To My Portfolio.",
@@ -47,6 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let letterIndexPhoto = 0;
   let currentPhrase;
   const path = window.location.pathname;
+
+  // Choose the sentence based on the current page
 
   function chooseSentence () {
     if (path.includes("index.html")) {
@@ -64,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Start typing the chosen sentence
+
   chooseSentence();
 
   function typePhoto() {
@@ -76,4 +82,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   typePhoto();
+});
+
+// Section Scroll Animation
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll('.scroll-section');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
 });

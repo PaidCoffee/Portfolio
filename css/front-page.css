@@ -1,23 +1,23 @@
 /* Backgrounds */
 
 .bg-about-me {
-    background-image: url('../images/2Z7A5121.jpg');
+    background-image: url('/images/photography/dark-cityscape-of-helsinki-center.jpg');
 }
 
 .bg-ux-ui {
-    background-image: url('../images/happy\ beavers.png');
+    background-image: url('/images/photography/person-waiting-for-a-bus.jpg');
 }
 
 .bg-photography {
-    background-image: url('../images/2Z7A4881.jpg');
+    background-image: url('/images/photography/streetwear-black-and-white-shot.jpg');
 }
 
 .bg-art {
-    background-image: url('../images/2Z7A4338.jpg');
+    background-image: url('/images/photography/osamu-dazai-figure-library.jpg');
 }
 
 .bg-blog {
-    background-image: url('../images/2Z7A8009.jpg');
+    background-image: url('../images/photography/warm-and-cozy-lantern.jpg');
 }
 
 .section-overlay {
@@ -26,7 +26,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0, 0.5);
+    background: rgba(0,0,0, 0.7);
     z-index: 1;
     pointer-events: none;
 }
@@ -47,40 +47,14 @@
     background-size: cover;
     background-position: center; 
     width: 100%;
-    height: 650px;
-    z-index: 1;  
-}
-
-.section-style-center::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px; 
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #121212 100%);
-    pointer-events: none;
-    z-index: 0;
-}
-
-.section-text-center {
-    max-width: 50%;
-    text-align: center;
+    height: 700px;
     z-index: 2;
 }
 
-.section-text-center h1 {
-    font-family: "Kaisei Decol", serif;
-    font-weight: 600;
-    font-style: bold;
-    font-size: 32px;
-}
-
-.section-text-center p {
-    font-family: "Noto Sans JP", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+.section-text-center {
+    text-align: center;
+    max-width: 50%;
+    z-index: 3;
 }
 
 /* Text on the right sections (UX, Art) */
@@ -88,7 +62,6 @@
 .section-style-right {
     position: relative;
     color: white;
-    background-color: #333333;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -96,88 +69,30 @@
     background-size: cover;
     background-position: center; 
     width: 100%;
-    height: 600px; 
-    z-index: 1;
-}
-
-.section-style-right::after,
-.section-style-right::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.section-style-right::before {
-    top: 0;
-    height: 200px;
-    background: linear-gradient(to bottom, #121212 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-.section-style-right::after {
-    bottom: 0;
-    height: 200px;
-    background: linear-gradient(to top, #121212 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-.section-text-right {
-    max-width: 50%;
-    margin-right: 30px;
+    height: 700px;
     z-index: 2;
 }
 
-.section-text-right h2 {
-    font-family: "Kaisei Decol", serif;
-    font-weight: 600;
-    font-style: bold;
-    font-size: 32px;
+.section-text-right {
+    text-align: left;
+    max-width: 50%;
+    z-index: 3;
+    margin-right: 40px;;
 }
-
-.section-text-right p {
-    font-family: "Noto Sans JP", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
+                                
 /* Text on the left sections (Photography, Blog) */
 
 .section-style-left {
     position: relative;
     color: white;
-    background-color: #333333;
     display: flex;
     align-items: center;
     width: 100%;
     background-size: cover;
     background-position: center; 
     width: 100%;
-    height: 600px; 
+    height: 700px;
     z-index: 1;
-}
-
-.section-style-left::after,
-.section-style-left::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.section-style-left::before {
-    top: 0;
-    height: 200px;
-    background: linear-gradient(to bottom, #121212 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-.section-style-left::after {
-    bottom: 0;
-    height: 200px;
-    background: linear-gradient(to top, #121212 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .section-text-left {
@@ -185,21 +100,6 @@
     margin-left: 30px;
     z-index: 2;
 }
-
-.section-text-left h2 {
-    font-family: "Kaisei Decol", serif;
-    font-weight: 600;
-    font-style: bold;
-    font-size: 32px;
-}
-
-.section-text-left p {
-    font-family: "Noto Sans JP", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
 
 /* Responsivity Mobile */
 
