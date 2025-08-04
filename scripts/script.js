@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
    "About Me",
    "Projects.",
    "Photography.",
-   "Art.",
    "Contact Me."];
   const elPhoto = document.getElementById("typewriter");
   let letterIndexPhoto = 0;
@@ -51,22 +50,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname;
 
   // Choose the sentence based on the current page
-
-  function chooseSentence () {
-    if (path.includes("index.html")) {
-      currentPhrase = phrasesPhoto[0];
-    } else if (path.includes("about-me.html")) {
-      currentPhrase = phrasesPhoto[1];
-    } else if (path.includes("ux.html")) {
-      currentPhrase = phrasesPhoto[2];
-    } else if (path.includes("photography.html")) {
-      currentPhrase = phrasesPhoto[3];
-    } else if (path.includes("art.html")) {
-      currentPhrase = phrasesPhoto[4];
-    } else {
-      currentPhrase = phrasesPhoto[5];
-    }
+function chooseSentence () {
+  if (path.endsWith("/index.html") || path === "/" || path === "/Portfolio/" ) {
+    currentPhrase = phrasesPhoto[0];
+  } else if (path.endsWith("/pages/about-me.html")) {
+    currentPhrase = phrasesPhoto[1];
+  } else if (path.endsWith("/pages/projects.html")) {
+    currentPhrase = phrasesPhoto[2];
+  } else if (path.endsWith("/pages/photography.html")) {
+    currentPhrase = phrasesPhoto[3];
+  } else if (path.endsWith("/pages/contact-me.html")) {
+    currentPhrase = phrasesPhoto[4];
+  } else {
+    currentPhrase = phrasesPhoto[0];
   }
+}
 
   // Start typing the chosen sentence
 
