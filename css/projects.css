@@ -93,3 +93,7 @@
     max-width: 33%;
     column-count: 3;
 }
+
+.hidden-project-images {
+    opacity: 0;
+}
