@@ -4,6 +4,16 @@ body {
     margin: 0; /* Remove default margin */
 }
 
+h1 {
+    color: #E0E0E0; /* Light text */
+    font-size: 42px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
 /* Heading styles */
 h2 {
     color: #E0E0E0; /* Light text */
@@ -14,8 +24,17 @@ h2 {
     font-style: normal;
 }
 
+h3 {
+    color: #E0E0E0; /* Light text */
+    font-size: 28px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}  
+
 /* Paragraph styles */
-p, ul {
+p, .list-style {
     color: #E0E0E0;
     font: 18px "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;

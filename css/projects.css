@@ -89,15 +89,6 @@
     
 }
 
-.project-details h3 {
-    color: #E0E0E0; /* Light text */
-    font-size: 24px;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}  
-
 .project-images img {
     max-width: 33%;
     column-count: 3;
