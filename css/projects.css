@@ -89,16 +89,6 @@
     
 }
 
-.project-details li {
-    color: #E0E0E0;
-    font: 16px "Noto Sans JP", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    /* max-width: 75ch; */ /* Limit line length */
-    line-height: 1.5;
-}
-
 .project-details h3 {
     color: #E0E0E0; /* Light text */
     font-size: 24px;
